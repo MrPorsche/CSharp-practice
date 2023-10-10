@@ -1,0 +1,14 @@
+E:\Academy\Practice\In Git\C#\bin\Debug\net7.0\C#.exe
+E:\Academy\Practice\In Git\C#\bin\Debug\net7.0\C#.deps.json
+E:\Academy\Practice\In Git\C#\bin\Debug\net7.0\C#.runtimeconfig.json
+E:\Academy\Practice\In Git\C#\bin\Debug\net7.0\C#.dll
+E:\Academy\Practice\In Git\C#\bin\Debug\net7.0\C#.pdb
+E:\Academy\Practice\In Git\C#\obj\Debug\net7.0\C#.GeneratedMSBuildEditorConfig.editorconfig
+E:\Academy\Practice\In Git\C#\obj\Debug\net7.0\C#.AssemblyInfoInputs.cache
+E:\Academy\Practice\In Git\C#\obj\Debug\net7.0\C#.AssemblyInfo.cs
+E:\Academy\Practice\In Git\C#\obj\Debug\net7.0\C#.csproj.CoreCompileInputs.cache
+E:\Academy\Practice\In Git\C#\obj\Debug\net7.0\C#.dll
+E:\Academy\Practice\In Git\C#\obj\Debug\net7.0\refint\C#.dll
+E:\Academy\Practice\In Git\C#\obj\Debug\net7.0\C#.pdb
+E:\Academy\Practice\In Git\C#\obj\Debug\net7.0\C#.genruntimeconfig.cache
+E:\Academy\Practice\In Git\C#\obj\Debug\net7.0\ref\C#.dll
