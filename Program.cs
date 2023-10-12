@@ -1,4 +1,4 @@
-﻿
+﻿/*
 // Write Your First C# Code
 
 Console.WriteLine("//////////////////////////////////////////////////// Write Your First C# Code ////////////////////////////////////////////////////");
@@ -106,6 +106,7 @@ View English output:
         c:\\Exercise\\ACME\\ru-RU\\data.txt\n
 */
 
+/*
 string proName = "ACME";
 
 string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";
@@ -296,3 +297,70 @@ else {
         Console.WriteLine("\nSorry! Better luck next time.");
 }
 
+Console.WriteLine("\n\n////////////////////////// Challenge: Improve renewal rate of subscriptions //////////////////////////");
+
+Random random = new Random();
+int daysUntilExpiration = random.Next(12);
+int discountPercentage  = 0;
+
+if (daysUntilExpiration == 0) {
+        Console.WriteLine("Your subscription has expired.");
+} else if (daysUntilExpiration == 1) {
+        Console.WriteLine("Your subscription expires within a day!");
+        discountPercentage = 20;
+} else if (daysUntilExpiration <= 5) {
+        Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.");
+        discountPercentage = 10;
+} else if (daysUntilExpiration <= 10) {
+        Console.WriteLine("Your subscription will expire soon. Renew now!");
+}
+
+if (discountPercentage > 0) {
+        Console.WriteLine($"Renew now and save upto {discountPercentage}%.");
+}
+Console.WriteLine("\n\n\n\n\n//////////////////////////////////////////////////// Arrays ////////////////////////////////////////////////////");
+
+string[] fraudulentOrderIDs = new string[3];
+
+fraudulentOrderIDs[0] = "A123";
+fraudulentOrderIDs[1] = "B456";
+fraudulentOrderIDs[2] = "C789";
+// fraudulentOrderIDs[3] = "D000";
+
+Console.WriteLine("\n\n////////////////////////// Another way of declaring OR initializing an Array //////////////////////////");
+
+string[] fraudulentOrderIDs = {"A123" , "B456", "C789"};
+
+Console.WriteLine($"First element of you array is: {fraudulentOrderIDs[0]}");
+Console.WriteLine($"Second element of your array is: {fraudulentOrderIDs[1]}");
+Console.WriteLine($"Third element of your array is: {fraudulentOrderIDs[2]}");
+
+fraudulentOrderIDs[0] ="F000";
+Console.WriteLine($"First element is reassign to: {fraudulentOrderIDs[0]}");
+
+Console.WriteLine($"There are {fraudulentOrderIDs.Length} faudulent orders to process.");
+
+Console.WriteLine("\n\n////////////////////////// foreach statement //////////////////////////");
+
+int[] inventory = {200, 450, 700, 175, 250};
+int sum = 0;
+int bin = 0;
+foreach (int items in inventory) {
+        sum += items;
+        bin++;
+        Console.WriteLine($"Bin {bin} = {items} items (Running total: {sum})");
+}
+
+Console.WriteLine($"We have {sum} items in inventory.");
+*/
+Console.WriteLine("\n\n////////////////////////// Challenge: Report the Order IDs that need further investigation //////////////////////////");
+
+string[] suspeciouseOrderIDs = {"B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"};
+
+Console.WriteLine("Below are the suspeciouse order IDs");
+
+foreach (string orderID in suspeciouseOrderIDs) {
+        if (orderID.StartsWith("B")) {
+                Console.WriteLine(orderID);
+        }
+}
