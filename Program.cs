@@ -1,4 +1,5 @@
-﻿// Write Your First C# Code
+﻿
+// Write Your First C# Code
 
 Console.WriteLine("//////////////////////////////////////////////////// Write Your First C# Code ////////////////////////////////////////////////////");
 
@@ -95,13 +96,15 @@ Console.WriteLine($@"C:\Output\{projectName}\Data");
 
 Console.WriteLine("\n\n\n\n\n//////////////////////////////////////////////////// Challange ////////////////////////////////////////////////////");
 
-Console.WriteLine("\nThis is the desired output..,");
+// This is the desired output..,
 
-Console.WriteLine("\nView English output:");
-Console.WriteLine("\n\tc:\\Exercise\\ACME\\data.txt");
+/*
+View English output:
+        c:\\Exercise\\ACME\\data.txt
 
-Console.WriteLine("\nПосмотреть русский вывод:");
-Console.WriteLine("\n\tc:\\Exercise\\ACME\\ru-RU\\data.txt\n");
+Посмотреть русский вывод:
+        c:\\Exercise\\ACME\\ru-RU\\data.txt\n
+*/
 
 string proName = "ACME";
 
@@ -174,7 +177,7 @@ Console.WriteLine($"Jeong\t\t{jeongGrade}\tA");
 
 Console.WriteLine("\n\n\n\n\n//////////////////////////////////////////////////// Calculate Final GPA ////////////////////////////////////////////////////");
 
-Console.WriteLine("\\\\I have changed student name and course names to my liking.");
+// I have changed student course names to my liking
 
 string studentName = "Ilyas Sayyed";
 string course1Name = "Java 101";
@@ -230,3 +233,66 @@ Console.WriteLine($"{course4Name}\t\t\t{course4Grade}\t\t{course4Credit}");
 Console.WriteLine($"{course5Name}\t\t\t\t{course5Grade}\t\t{course5Credit}");
 
 Console.WriteLine($"\nFinal GPA:\t\t\t{leadingDigit}.{firstDigit}{secondDigit}");
+
+
+Console.WriteLine("\n\n\n\n\n//////////////////////////////////////////////////// Math class methods challenge ////////////////////////////////////////////////////");
+
+Console.WriteLine("\n////////////////////////// Implement a method of the Math class that returns the larger of two numbers //////////////////////////");
+
+int firstValue  = 500;
+int secondValue = 600;
+int largeValue;
+
+largeValue = Math.Max(firstValue, secondValue);
+
+Console.WriteLine($"The large value is: {largeValue}");
+
+Console.WriteLine("\n////////////////////////// Random.Next() method //////////////////////////\n");
+
+Random dice = new Random();
+
+int roll = dice.Next(1, 30);
+int roll2 = dice.Next(1, 30);
+int roll3 = dice.Next(1, 40);
+
+int total = roll + roll2 + roll3;
+
+Console.WriteLine($"Dice roll: {roll} + {roll2} + {roll3} + {total}");
+
+
+Console.WriteLine("\n////////////////////////// Conditions //////////////////////////");
+Console.WriteLine("\n////////////////////////// if, else, and else if practice //////////////////////////");
+
+if ((roll == roll2) || (roll2 == roll3) || (roll3 == roll)) { // "||" logical OR operator
+        if ((roll == roll2) && (roll2 == roll3)) { // "&&" logical AND operator
+                Console.WriteLine("You rolled triples! +6 bonus to total!");
+                total += 6;
+                Console.WriteLine($"Your new score is: {total}");
+        }
+        else
+        {
+                Console.WriteLine("You rolled doubles! +2 bonus to total!");
+                total += 2;
+                Console.WriteLine($"Your new score is: {total}");
+        }
+}
+
+if (total >= 90) {
+        Console.WriteLine("\nAwesome! You have won a Brand New car.");
+}
+else if (total >= 72) {
+        Console.WriteLine("\nWonderful! You have won a New Laptop.");
+}
+else if (total >= 55) {
+        Console.WriteLine("\nAmazing! You have won a Trip for two.");
+}
+else if (total >= 40) {
+        Console.WriteLine("\nGreat! You have won a Pet.");
+}
+else if (total >= 28) {
+        Console.WriteLine("\nCool! You have won another Round.");
+}
+else {
+        Console.WriteLine("\nSorry! Better luck next time.");
+}
+
