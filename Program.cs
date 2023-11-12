@@ -39,7 +39,7 @@ Console.WriteLine("\n\n\n\n\n///////////////////////////////////////////////////
 
 Console.WriteLine("\nYou can also add encoded characters in literal strings using the \"\\u\" escape sequence, then a four-character code representing some character in Unicode (UTF-16).");
 
-Console.WriteLine("\nExample: \"Kon'nichiwa World\"\nwrite like this...");
+Console.WriteLine("\nExample: \"Kon'nichiwa World\"\nwrites like this...");
 
 Console.WriteLine("\u3053\u3093\u306B\u3061\u306F World!");
 Console.WriteLine("using \\u3053\\u3093\\u306B\\u3061\\u306F unicode.");
@@ -48,7 +48,7 @@ Console.WriteLine("\n\n\n\n\n///////////////////////////////////////////////////
 
 Console.WriteLine("\n////////////////////////// Concatenate using + symbol //////////////////////////");
 
-string name = "Ilyas";
+string name = "Ilyas Sayyed";
 string greeting = "Hello " + name;
 Console.WriteLine(greeting);
 
@@ -67,7 +67,7 @@ Console.WriteLine("\n\n\n\n\n///////////////////////////////////////////////////
 
 Console.WriteLine("\n////////////////////////// What is string interpolation? //////////////////////////");
 
-Console.WriteLine("\nString interpolation combines multiple values into a single literal string by using a \"template\" and one or more interpolation expressions. An interpolation expression is a variable surrounded by an opening and closing curly brace symbol { }. The literal string becomes a template when it's prefixed by the $ character.");
+Console.WriteLine("\nString interpolation combines multiple values into a single literal string by using a \"template\" and one or more interpolation expressions. \nAn interpolation expression is a variable surrounded by an opening and closing curly brace symbol { }. The literal string becomes a template when it's prefixed by the $ character.");
 
 Console.WriteLine("\nIn other words, instead of writing the following line of code:\n\"string message = greeting + \" \" + firstName + \"!\"");
 
@@ -98,15 +98,15 @@ Console.WriteLine("\n\n\n\n\n///////////////////////////////////////////////////
 
 // This is the desired output..,
 
-/*
-View English output:
-        c:\\Exercise\\ACME\\data.txt
+//
+// View English output:
+//         c:\\Exercise\\ACME\\data.txt
 
-Посмотреть русский вывод:
-        c:\\Exercise\\ACME\\ru-RU\\data.txt\n
-*/
+// Посмотреть русский вывод:
+//         c:\\Exercise\\ACME\\ru-RU\\data.txt\n
 
-/*
+
+
 string proName = "ACME";
 
 string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";
@@ -177,8 +177,6 @@ Console.WriteLine($"Jeong\t\t{jeongGrade}\tA");
 
 
 Console.WriteLine("\n\n\n\n\n//////////////////////////////////////////////////// Calculate Final GPA ////////////////////////////////////////////////////");
-
-// I have changed student course names to my liking
 
 string studentName = "Ilyas Sayyed";
 string course1Name = "Java 101";
@@ -329,11 +327,11 @@ fraudulentOrderIDs[2] = "C789";
 
 Console.WriteLine("\n\n////////////////////////// Another way of declaring OR initializing an Array //////////////////////////");
 
-string[] fraudulentOrderIDs = {"A123" , "B456", "C789"};
+string[] fraudulentOrderIDes = {"A123" , "B456", "C789"};
 
-Console.WriteLine($"First element of you array is: {fraudulentOrderIDs[0]}");
-Console.WriteLine($"Second element of your array is: {fraudulentOrderIDs[1]}");
-Console.WriteLine($"Third element of your array is: {fraudulentOrderIDs[2]}");
+Console.WriteLine($"First element of you array is: {fraudulentOrderIDes[0]}");
+Console.WriteLine($"Second element of your array is: {fraudulentOrderIDes[1]}");
+Console.WriteLine($"Third element of your array is: {fraudulentOrderIDes[2]}");
 
 fraudulentOrderIDs[0] ="F000";
 Console.WriteLine($"First element is reassign to: {fraudulentOrderIDs[0]}");
@@ -352,7 +350,7 @@ foreach (int items in inventory) {
 }
 
 Console.WriteLine($"We have {sum} items in inventory.");
-*/
+
 Console.WriteLine("\n\n////////////////////////// Challenge: Report the Order IDs that need further investigation //////////////////////////");
 
 string[] suspeciouseOrderIDs = {"B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"};
@@ -364,3 +362,222 @@ foreach (string orderID in suspeciouseOrderIDs) {
                 Console.WriteLine(orderID);
         }
 }
+*/
+/*
+string firstName = "ILYAS";
+// int widgetsSold = 7;
+// Console.WriteLine($"{firstName} sold {widgetsSold} widgets.");
+// Testing a change to the message.
+
+int widgetsPurchased = 7;
+
+
+Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
+*/
+
+/*
+The following code creates five random OrderIDs to thest the
+fraud detection process. OrderIDs consist of a letter from A
+to E, and a three digit number. Ex. A123
+*/
+
+/*
+Random random = new Random();
+string[] orderIDs = new string[5];
+
+for (int i = 0; i < orderIDs.Length; i++)
+{
+        int prefixValue = random.Next(65, 70);
+        string prefix = Convert.ToChar(prefixValue).ToString();
+        string suffix = random.Next(1, 1000).ToString("000");
+
+        orderIDs[i] = prefix + suffix;
+}
+
+foreach (var orderID in orderIDs)
+{
+        Console.WriteLine(orderID);
+}
+*/
+
+/*
+Console.WriteLine("\n\n////////////////////////// Whitespace //////////////////////////");
+
+Console.WriteLine("\n\n////////////////////////// Example 1: //////////////////////////");
+Console
+.
+WriteLine
+(
+        "This is example 1!"
+)
+;
+
+Console.WriteLine("\n\n////////////////////////// Example 2: //////////////////////////");
+
+string firstWord="Greetings!";string lastWord="This is Example 2!";Console.WriteLine(firstWord+" "+lastWord+"!");
+
+
+Random dice = new Random();
+
+int roll1 = dice.Next(1, 7);
+int roll2 = dice.Next(1, 7);
+int roll3 = dice.Next(1, 7);
+
+int total = roll1 + roll2 + roll3;
+Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
+
+if ((roll1 == roll2) || (roll2 == roll3) || (roll3 == roll1))
+{
+        if ((roll1 == roll2) && (roll2 == roll3))
+        {
+                Console.WriteLine("You rolled triples! +6 bonus added to total!");
+                total += 6;
+        }
+        else
+        {
+                Console.WriteLine("You rolled doubles! 2+ bonus added to total!");
+                total +=2;
+        }
+}
+*/
+
+// Console.WriteLine("\n\n////////////////////////// Code readability challenge //////////////////////////");
+
+/*
+   This code reverses a message, counts the number of times 
+   a particular character appears, then prints the results
+   to the console window.
+ */
+/*
+string str = "The quick brown fox jumps over the lazy dog.";
+
+char[] charMessage = str.ToCharArray();
+Array.Reverse(charMessage);
+
+int letterCount = 0;
+
+foreach (char i in charMessage)
+{
+        if (i == 'o')
+        {
+                letterCount++;
+        }
+}
+
+string new_message = new string(charMessage);
+
+Console.WriteLine(new_message);
+Console.WriteLine($"'o' appears {letterCount} times.");
+*/
+
+Console.WriteLine("\n\n////////////////////////// Guided project - Develop foreach and if-elseif-else structures to process array data in C# //////////////////////////");
+
+int examAssignments = 5;
+
+int [] sophiaScores = new int[] {90, 86, 87, 98, 100, 94, 90};
+int [] andrewScores = new int[] {92, 89, 81, 96, 90, 89};
+int [] emmaScores = new int[] {90, 85, 87, 98, 68, 89, 89};
+int [] loganScores = new int[] {91, 95, 87, 88, 96, 96};
+int [] beckyScores= new int[] {92, 91, 90, 91, 92, 92, 92};
+int [] chrisScores= new int[] {84, 86, 88, 90, 92, 94, 96, 98};
+int [] ericScores= new int[] {80, 90, 100, 80, 90, 100, 80, 90};
+int [] gregorScores= new int[] {91, 91, 91, 91, 91, 91, 91};
+
+string[] studentNames = new string[] {"Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor"};
+int [] studentScores = new int[10];
+
+string currentStudentLetterGrade = "";
+
+Console.WriteLine("Student\t\tGrade\n");
+
+foreach (string name in studentNames)
+{
+    string currentStudent = name;
+
+    if (currentStudent == "Sophia")
+        studentScores = sophiaScores;
+    else if (currentStudent == "Andrew")
+        studentScores = andrewScores;
+    else if (currentStudent == "Emma")
+        studentScores = emmaScores;
+    else if (currentStudent == "Logan")
+        studentScores = loganScores;
+    else if (currentStudent == "Becky")
+        studentScores = beckyScores;
+    else if (currentStudent == "Chris")
+        studentScores = chrisScores;
+    else if (currentStudent == "Eric")
+        studentScores = ericScores;
+    else if (currentStudent == "Gregor")
+        studentScores = gregorScores;
+    else 
+        continue;
+
+    int sumAssignmentScores = 0;
+
+    decimal currentStudentGrade= 0;
+
+    int gradeAssignments = 0;
+
+    foreach (int score in studentScores)
+    {
+        gradeAssignments += 1;
+
+        if (gradeAssignments <= examAssignments)
+            
+            sumAssignmentScores += score;
+        
+        else 
+            
+            sumAssignmentScores += score / 10;
+
+    }
+
+    currentStudentGrade = (decimal)sumAssignmentScores / examAssignments;
+
+    if (currentStudentGrade >=97)
+         currentStudentLetterGrade = "A+";
+
+    else if (currentStudentGrade >=93)
+         currentStudentLetterGrade = "A";
+
+    else if (currentStudentGrade >=90)
+         currentStudentLetterGrade = "A-";
+
+    else if (currentStudentGrade >=87)
+         currentStudentLetterGrade = "B+";
+
+    else if (currentStudentGrade >=83)
+         currentStudentLetterGrade = "B";
+
+    else if (currentStudentGrade >=80)
+         currentStudentLetterGrade = "B-";
+
+    else if (currentStudentGrade >=77)
+         currentStudentLetterGrade = "C+";
+
+    else if (currentStudentGrade >=73)
+         currentStudentLetterGrade = "C";
+
+    else if (currentStudentGrade >=70)
+         currentStudentLetterGrade = "C-";
+
+    else if (currentStudentGrade >=67)
+         currentStudentLetterGrade = "D+";
+
+    else if (currentStudentGrade >=63)
+         currentStudentLetterGrade = "D";
+
+    else if (currentStudentGrade >=60)
+         currentStudentLetterGrade = "D-";
+
+    else 
+         currentStudentLetterGrade = "F";
+
+    Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
+
+}
+
+
+Console.WriteLine("Press the Enter key to continue");
+Console.ReadLine();
